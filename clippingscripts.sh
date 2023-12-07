@@ -1,0 +1,12 @@
+python run.py --num_layers 4 --clip_max_norm 4
+python run.py --num_layers 4 --clip_max_norm 3
+python run.py --num_layers 4 --clip_max_norm 2
+python run.py --num_layers 4 --clip_max_norm 1
+python run.py --num_layers 3 --clip_max_norm 4
+python run.py --num_layers 3 --clip_max_norm 3
+python run.py --num_layers 3 --clip_max_norm 2
+python run.py --num_layers 3 --clip_max_norm 1
+python run.py --num_layers 2 --clip_max_norm 4
+python run.py --num_layers 2 --clip_max_norm 3
+python run.py --num_layers 2 --clip_max_norm 2
+python run.py --num_layers 2 --clip_max_norm 1
