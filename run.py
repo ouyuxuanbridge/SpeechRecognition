@@ -2,13 +2,14 @@ from dataloader import get_dataloader
 import torch
 from collections import Counter
 from datetime import datetime
-from trainer import train
+#from trainer import train
 import models
 from decoder import decode
 import numpy as np
 import argparse
 #from trainer311 import train    
 #from trainer312 import train
+from trainer_adaptivelr import train
 import random
 
 parser = argparse.ArgumentParser(description = 'Running MLMI2 experiments')
@@ -30,6 +31,7 @@ parser.add_argument('--num_epochs', type=int, default=20)
 parser.add_argument('--dropout_rate', type=float, default=0.5)
 parser.add_argument('--clip_max_norm', type=float, default=1)
 parser.add_argument('--num_ff_layers', type=int, default=2)
+parser.add_argument('--scheduler_factor', type=float, default=0.1)
 args = parser.parse_args()
 
 torch.manual_seed(args.seed)
@@ -50,8 +52,8 @@ print(args)
 args.device = device
 args.vocab = vocab
 
-model = models.BiLSTM_twoff(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab))
-# model = models.BiLSTM(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab))
+#model = models.UniLSTM_unidirectional(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab))
+model = models.BiLSTM(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab))
 #model = models.BiLSTM_withdropout(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab),args.dropout_rate)
 if torch.__version__ == "2.1.0":
     model = torch.compile(model)

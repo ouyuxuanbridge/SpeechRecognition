@@ -88,3 +88,16 @@ class BiLSTM_twoff(nn.Module):
 
        
         return output
+
+class UniLSTM_unidirectional(nn.Module):
+
+    def __init__(self, num_layers, in_dims, hidden_dims, out_dims):
+        super().__init__()
+
+        self.lstm = nn.LSTM(in_dims, hidden_dims, num_layers, bidirectional=False)
+        self.proj = nn.Linear(hidden_dims , out_dims)
+
+    def forward(self, feat):
+        hidden, _ = self.lstm(feat)
+        output = self.proj(hidden)
+        return output

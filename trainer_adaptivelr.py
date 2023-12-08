@@ -17,6 +17,7 @@ def train(model, args):
     val_loader = get_dataloader(args.val_json, args.batch_size, False)
     criterion = CTCLoss(zero_infinity=True)
     optimiser = SGD(model.parameters(), lr=args.lr)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimiser , 'min',factor=args.scheduler_factor)
 
     def train_one_epoch(epoch):
         running_loss = 0.
@@ -80,6 +81,7 @@ def train(model, args):
             val_loss = criterion(outputs, targets, in_lens, out_lens)
             running_val_loss += val_loss
         avg_val_loss = running_val_loss / len(val_loader)
+        scheduler.step(avg_val_loss)
         val_decode = decode(model, args, args.val_json)
         print('LOSS train {:.5f} valid {:.5f}, valid PER {:.2f}%'.format(
             avg_train_loss, avg_val_loss, val_decode[4])
@@ -129,10 +131,10 @@ def train(model, args):
 
     # Save plot to a file
     plt.tight_layout()
-    plt.savefig("unidirectional"+'training_plots.png')
+    plt.savefig("schedule_lr"+"scheduler_factor"+str(args.scheduler_factor)+"num_layers"+str(args.num_layers)+'training_plots.png')
 
     # Save data to a file
-    with open("unidirectional"+'training_data.txt', 'w') as file:
+    with open("schedule_lr"+"scheduler_factor"+str(args.scheduler_factor)+"num_layers"+str(args.num_layers)+'training_data.txt', 'w') as file:
         file.write('train_loss\n')
         file.write(str(all_train_losses) + '\n')
         file.write('valid_loss\n')
