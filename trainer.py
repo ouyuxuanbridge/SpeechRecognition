@@ -129,10 +129,10 @@ def train(model, args):
 
     # Save plot to a file
     plt.tight_layout()
-    plt.savefig("num_layers"+str(args.num_layers)+"dropout"+str(args.dropout_rate)+'training_plots.png')
+    plt.savefig("SGD"+"numdim"+str(args.model_dims)+"num_layers"+str(args.num_layers)+"lr"+str(args.lr)+'training_plots.png')
 
     # Save data to a file
-    with open("num_layers"+str(args.num_layers)+"dropout"+str(args.dropout_rate)+'training_data.txt', 'w') as file:
+    with open("SGD"+"numdim"+str(args.model_dims)+"num_layers"+str(args.num_layers)+"lr"+str(args.lr)+'training_data.txt', 'w') as file:
         file.write('train_loss\n')
         file.write(str(all_train_losses) + '\n')
         file.write('valid_loss\n')

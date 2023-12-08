@@ -2,13 +2,13 @@ from dataloader import get_dataloader
 import torch
 from collections import Counter
 from datetime import datetime
-#from trainer import train
+from trainer import train
 import models
 from decoder import decode
 import numpy as np
 import argparse
 #from trainer311 import train    
-from trainer312 import train
+#from trainer312 import train
 import random
 
 parser = argparse.ArgumentParser(description = 'Running MLMI2 experiments')

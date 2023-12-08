@@ -39,3 +39,16 @@ class BiLSTM_withdropout(nn.Module):
 
         output = self.proj(hidden)
         return output
+
+class BiLSTM_moreff(nn.Module):
+
+    def __init__(self, num_layers, in_dims, hidden_dims, out_dims,num_ff_layers):
+        super().__init__()
+
+        self.lstm = nn.LSTM(in_dims, hidden_dims, num_layers, bidirectional=True)
+        self.proj = nn.Linear(hidden_dims * 2, out_dims)
+
+    def forward(self, feat):
+        hidden, _ = self.lstm(feat)
+        output = self.proj(hidden)
+        return output
