@@ -29,6 +29,7 @@ parser.add_argument('--report_interval', type=int, default=50, help="report inte
 parser.add_argument('--num_epochs', type=int, default=20)
 parser.add_argument('--dropout_rate', type=float, default=0.5)
 parser.add_argument('--clip_max_norm', type=float, default=1)
+parser.add_argument('--num_ff_layers', type=int, default=2)
 args = parser.parse_args()
 
 torch.manual_seed(args.seed)
@@ -49,7 +50,8 @@ print(args)
 args.device = device
 args.vocab = vocab
 
-model = models.BiLSTM(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab))
+model = models.BiLSTM_twoff(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab))
+# model = models.BiLSTM(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab))
 #model = models.BiLSTM_withdropout(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab),args.dropout_rate)
 if torch.__version__ == "2.1.0":
     model = torch.compile(model)
