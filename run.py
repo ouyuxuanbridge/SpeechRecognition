@@ -2,13 +2,13 @@ from dataloader import get_dataloader
 import torch
 from collections import Counter
 from datetime import datetime
-from trainer import train
+#from trainer import train
 import models
 from decoder import decode
 import numpy as np
 import argparse
 #from trainer311 import train    
-#from trainer312 import train
+from trainer312 import train
 import random
 
 parser = argparse.ArgumentParser(description = 'Running MLMI2 experiments')
@@ -49,8 +49,8 @@ print(args)
 args.device = device
 args.vocab = vocab
 
-#model = models.BiLSTM(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab))
-model = models.BiLSTM_withdropout(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab),args.dropout_rate)
+model = models.BiLSTM(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab))
+#model = models.BiLSTM_withdropout(args.num_layers, args.fbank_dims * args.concat, args.model_dims, len(args.vocab),args.dropout_rate)
 if torch.__version__ == "2.1.0":
     model = torch.compile(model)
 

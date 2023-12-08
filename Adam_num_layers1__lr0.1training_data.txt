@@ -1,0 +1,6 @@
+train_loss
+[4.041287622451782, 8.035721864700317, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]
+valid_loss
+[4.1762213706970215, 6.126136779785156, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]
+valid_per
+[85.21530462604986, 78.0962538328223, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]

@@ -1,0 +1,412 @@
+Namespace(seed=123, train_json='/rds/user/yo279/hpc-work/MLMI2/fbanks/train_fbank.json', val_json='/rds/user/yo279/hpc-work/MLMI2/fbanks/dev_fbank.json', test_json='/rds/user/yo279/hpc-work/MLMI2/fbanks/test_fbank.json', batch_size=4, num_layers=1, fbank_dims=23, model_dims=128, concat=1, lr=0.1, vocab='vocab_39.txt', report_interval=50, num_epochs=20, dropout_rate=0.5, clip_max_norm=1)
+Total number of model parameters is 166952
+EPOCH 1:
+  batch 50 loss: 6.513738861083985
+  batch 100 loss: 4.412431764602661
+  batch 150 loss: 4.242932949066162
+  batch 200 loss: 4.209947400093078
+  batch 250 loss: 4.216954503059387
+  batch 300 loss: 4.0171360635757445
+  batch 350 loss: 3.8940559577941896
+  batch 400 loss: 3.933127326965332
+  batch 450 loss: 3.883147792816162
+  batch 500 loss: 3.831627411842346
+  batch 550 loss: 3.906487250328064
+  batch 600 loss: 4.1566255664825436
+  batch 650 loss: 3.9371242237091066
+  batch 700 loss: 3.94575891494751
+  batch 750 loss: 3.832417254447937
+  batch 800 loss: 3.987666983604431
+  batch 850 loss: 4.007496953010559
+  batch 900 loss: 4.041287622451782
+LOSS train 4.04129 valid 4.17622, valid PER 85.22%
+EPOCH 2:
+  batch 50 loss: 3.9041513633728027
+  batch 100 loss: 3.8481784582138063
+  batch 150 loss: 3.8479748153686524
+  batch 200 loss: 3.9879074144363402
+  batch 250 loss: 3.900625023841858
+  batch 300 loss: 3.9964638566970825
+  batch 350 loss: 4.054817204475403
+  batch 400 loss: 3.992066068649292
+  batch 450 loss: 3.906878600120544
+  batch 500 loss: 3.838610258102417
+  batch 550 loss: 3.818550853729248
+  batch 600 loss: 3.9492197275161742
+  batch 650 loss: 4.044855427742005
+  batch 700 loss: 3.9538074779510497
+  batch 750 loss: 11.63256166934967
+  batch 800 loss: 10.311798458099366
+  batch 850 loss: 8.441520404815673
+  batch 900 loss: 8.035721864700317
+LOSS train 8.03572 valid 6.12614, valid PER 78.10%
+EPOCH 3:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 4:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 5:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 6:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 7:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 8:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 9:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 10:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 11:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 12:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 13:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 14:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 15:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 16:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 17:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 18:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 19:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+EPOCH 20:
+  batch 50 loss: nan
+  batch 100 loss: nan
+  batch 150 loss: nan
+  batch 200 loss: nan
+  batch 250 loss: nan
+  batch 300 loss: nan
+  batch 350 loss: nan
+  batch 400 loss: nan
+  batch 450 loss: nan
+  batch 500 loss: nan
+  batch 550 loss: nan
+  batch 600 loss: nan
+  batch 650 loss: nan
+  batch 700 loss: nan
+  batch 750 loss: nan
+  batch 800 loss: nan
+  batch 850 loss: nan
+  batch 900 loss: nan
+LOSS train nan valid nan, valid PER 100.00%
+train_loss
+[4.041287622451782, 8.035721864700317, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]
+valid_loss
+[4.1762213706970215, 6.126136779785156, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]
+valid_per
+[85.21530462604986, 78.0962538328223, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0]
+Training finished in 3.0 minutes.
+Model saved to checkpoints/20231208_011935/model_1
+Loading model from checkpoints/20231208_011935/model_1
+SUB: 1.20%, DEL: 84.10%, INS: 0.00%, COR: 14.71%, PER: 85.29%
