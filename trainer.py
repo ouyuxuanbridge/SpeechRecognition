@@ -8,7 +8,7 @@ from torch.nn.functional import log_softmax
 from torch.optim import SGD
 from decoder import decode
 from utils import concat_inputs
-
+import matplotlib.pyplot as plt
 from dataloader import get_dataloader
 
 def train(model, args):
@@ -98,5 +98,47 @@ def train(model, args):
     print(all_val_losses)
     print('valid_per')
     print(all_val_pers)
+    epochs = range(1, 21)
+
+    # Plotting
+    plt.figure(figsize=(15, 5))
+
+    # Train Loss Plot
+    plt.subplot(1, 3, 1)
+    plt.plot(epochs, all_train_losses, label='Train Loss', color='blue')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.title('Train Loss')
+    plt.grid(True)
+
+    # Validation Loss Plot
+    plt.subplot(1, 3, 2)
+    plt.plot(epochs, all_val_losses, label='Validation Loss', color='orange')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.title('Validation Loss')
+    plt.grid(True)
+
+    # Validation PER Plot
+    plt.subplot(1, 3, 3)
+    plt.plot(epochs, all_val_pers, label='Validation PER', color='green')
+    plt.xlabel('Epochs')
+    plt.ylabel('PER (%)')
+    plt.title('Validation PER')
+    plt.grid(True)
+
+    # Save plot to a file
+    plt.tight_layout()
+    plt.savefig("num_layers"+str(args.num_layers)+"dropout"+str(args.dropout_rate)+'training_plots.png')
+
+    # Save data to a file
+    with open("num_layers"+str(args.num_layers)+"dropout"+str(args.dropout_rate)+'training_data.txt', 'w') as file:
+        file.write('train_loss\n')
+        file.write(str(all_train_losses) + '\n')
+        file.write('valid_loss\n')
+        file.write(str(all_val_losses) + '\n')
+        file.write('valid_per\n')
+        file.write(str(all_val_pers) + '\n')
     return model_path
+
 
